@@ -332,7 +332,7 @@ def main():
                 directory_args['mode'] = directory_mode
             else:
                 directory_args['mode'] = None
-            adjust_recursive_directory_permissions(pre_existing_dir, new_directory_list, module, directory_args, changed)
+            changed = adjust_recursive_directory_permissions(pre_existing_dir, new_directory_list, module, directory_args, changed)
 
     if os.path.isdir(b_dest):
         basename = os.path.basename(src)
